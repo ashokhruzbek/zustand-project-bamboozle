@@ -1,8 +1,10 @@
 import React from 'react'
 
-function QuestionCard() {
+function QuestionCard({index}) {
   return (
-    <div>QuestionCard</div>
+    <div className='box'>
+        <h2>{index}</h2>
+    </div>
   )
 }
 
