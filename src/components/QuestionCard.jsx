@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useState } from "react";
+import { useGameStore } from "../zustand/gameStore";
 
-function QuestionCard({ question, index }) {
-    console.log(question);
-    
+function QuestionCard({ index, question }) {
+  const setCurrentQuestion = useGameStore(state => state.setCurrentQuestion);
+
   return (
-    <div className='box' onClick={()=>{alert(question.text)}}>
-        <h2>{index}</h2>
+    <div className="box" onClick={() => setCurrentQuestion(question)}>
+      <h2>{index}</h2>
     </div>
-  )
+  );
 }
 
-export default QuestionCard
+export default QuestionCard;
