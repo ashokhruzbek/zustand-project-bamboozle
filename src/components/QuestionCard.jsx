@@ -1,8 +1,10 @@
 import React from 'react'
 
-function QuestionCard({index}) {
+function QuestionCard({ question, index }) {
+    console.log(question);
+    
   return (
-    <div className='box'>
+    <div className='box' onClick={()=>{alert(question.text)}}>
         <h2>{index}</h2>
     </div>
   )
